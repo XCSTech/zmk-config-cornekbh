@@ -49,6 +49,75 @@
             #binding-cells = <0>;
             mods = <(MOD_LSFT)>;
         };
+
+        nh: number_hold {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            flavor = "tap-preferred";
+            bindings = <&kp>, <&kp>;
+            quick-tap-ms = <180>;
+        };
+
+        td_0: td_0 {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            bindings = <&nh LA(LC(LS(N0))) N0>, <&nh LA(LC(LG(N0))) N0>;
+        };
+
+        td_1: td_1 {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            bindings = <&nh LA(LC(LS(N1))) N1>, <&nh LA(LC(LG(N1))) N1>;
+        };
+
+        td_2: td_2 {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            bindings = <&nh LA(LC(LS(N2))) N2>, <&nh LA(LC(LG(N2))) N2>;
+        };
+
+        td_3: td_3 {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            bindings = <&nh LA(LC(LS(N3))) N3>, <&nh LA(LC(LG(N3))) N3>;
+        };
+
+        td_4: td_4 {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            bindings = <&nh LA(LC(LS(N4))) N4>, <&nh LA(LC(LG(N4))) N4>;
+        };
+
+        td_5: td_5 {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            bindings = <&nh LA(LC(LS(N5))) N5>, <&nh LA(LC(LG(N5))) N5>;
+        };
+
+        td_6: td_6 {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            bindings = <&nh LA(LC(LS(N6))) N6>, <&nh LA(LC(LG(N6))) N6>;
+        };
+
+        td_7: td_7 {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            bindings = <&nh LA(LC(LS(N7))) N7>, <&nh LA(LC(LG(N7))) N7>;
+        };
+
+        td_8: td_8 {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            bindings = <&nh LA(LC(LS(N8))) N8>, <&nh LA(LC(LG(N8))) N8>;
+        };
+
+        td_9: td_9 {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            bindings = <&nh LA(LC(LS(N9))) N9>, <&nh LA(LC(LG(N9))) N9>;
+        };
     };
 
     macros {
@@ -193,7 +262,7 @@
         };
 
         NAV {
-            display-name = "NavNum";
+            display-name = "NumPad";
 
             // -----------------------------------------------------------------------------------------
             // |  TAB |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | BKSP |
@@ -202,9 +271,9 @@
             // | GUI | CTRL | SHFT | LWR | SPC |   | ENT | RSE  | BKSP | ALT | ESC |
 
             bindings = <
-&trans  &kp N1  &kp N2    &kp N3       &kp N4           &kp N5           &kp N6   &kp N7        &kp N8        &kp N9        &kp N0  &trans
-&caps_word  &trans  &trans    &kp UP_ARROW  &browsertab      &kp PAGE_UP      &kp N0   &kp N4  &kp N5        &kp N6  &trans  &trans
-&trans  &trans  &kp LEFT  &kp DOWN      &kp RIGHT_ARROW  &kp PAGE_DOWN    &trans   &kp N1  &kp N2  &kp N3  &trans  &trans
+&trans  &td_1  &td_2    &td_3       &td_4           &td_5           &td_6   &td_7        &td_8        &td_9        &td_0  &trans
+&caps_word  &trans  &trans    &kp UP_ARROW  &browsertab      &kp PAGE_UP      &td_0   &td_4  &td_5        &td_6  &trans  &trans
+&trans  &trans  &kp LEFT  &kp DOWN      &kp RIGHT_ARROW  &kp PAGE_DOWN    &trans   &td_1  &td_2  &td_3  &trans  &trans
                           &kp LGUI      &trans           &kp SPACE        &kp RET  &mo 3        &trans
             >;
         };
@@ -227,7 +296,7 @@
         };
 
         ADJ {
-            display-name = "System";
+            display-name = "Functions";
             bindings = <
 &trans  &kp F1        &kp F2        &kp F3        &kp F4      &kp F5            &kp F6  &kp F7  &kp F8  &kp F9  &kp F10      &trans
 &trans  &kp F11       &kp F12       &trans        &trans      &studio_unlock            &trans  &trans  &trans  &trans  &trans       &trans
