@@ -53,7 +53,7 @@
         td_ctrl_shift: td_ctrl_shift {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            bindings = <&kp LCTRL>, <&kp LSHIFT>;
+            bindings = <&kp LSHIFT>, <&kp LCTRL>;
         };
 
         nh: number_hold {
