@@ -252,71 +252,51 @@
 
         DEF {
             display-name = "Base";
-
-            // -----------------------------------------------------------------------------------------
-            // |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  |
-            // |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  |
-            // |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  |
-            // | GUI | CTRL | SHFT | LWR | SPC |   | ENT | RSE  | BKSP | ALT | ESC |
-
             bindings = <
-&kp TAB    &kp Q  &kp W  &kp E     &kp R  &kp T        &kp Y    &kp U      &kp I          &kp O    &kp P     &kp BACKSPACE
-&kp LSHFT  &kp A  &kp S  &kp D     &kp F  &kp G        &kp H    &kp J      &kp K          &kp L    &kp SEMI  &kp SQT
-&td_ctrl_shift  &kp Z  &kp X  &kp C     &kp V  &kp B        &kp N    &kp M      &kp COMMA      &kp DOT  &kp FSLH  &mo 4
-                         &kp LGUI  &mo 1  &kp SPACE    &kp RET  &lt 2 TAB  &kp LEFT_ALT
+&kp ESC          &kp Q  &kp W  &kp E  &kp R  &kp T        &kp Y  &kp U      &kp I      &kp O    &kp P     &kp BACKSPACE
+&kp TAB          &kp A  &kp S  &kp D  &kp F  &kp G        &kp H  &kp J      &kp K      &kp L    &kp SEMI  &kp RSHFT
+&td_ctrl_shift   &kp Z  &kp X  &kp C  &kp V  &kp B        &kp N  &kp M      &kp COMMA  &kp DOT  &kp FSLH  &kp RET
+                               &mo 1  &mo 2  &kp LGUI     &kp SPACE  &kp LALT  &mo 1
             >;
         };
 
         NAV {
             display-name = "NumPad";
-
-            // -----------------------------------------------------------------------------------------
-            // |  TAB |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | BKSP |
-            // | BTCLR| BT1 | BT2 | BT3 | BT4 | BT5 |   | LFT | DWN |  UP | RGT |     |      |
-            // | SHFT |     |     |     |     |     |   |     |     |     |     |     |      |
-            // | GUI | CTRL | SHFT | LWR | SPC |   | ENT | RSE  | BKSP | ALT | ESC |
-
             bindings = <
-&trans  &td_1  &td_2    &td_3       &td_4           &td_5           &td_6   &td_7        &td_8        &td_9        &td_0  &trans
-&caps_word  &trans  &trans    &kp UP_ARROW  &browsertab      &kp PAGE_UP      &td_0   &td_4  &td_5        &td_6  &trans  &trans
-&trans  &trans  &kp LEFT  &kp DOWN      &kp RIGHT_ARROW  &kp PAGE_DOWN    &trans   &td_1  &td_2  &td_3  &trans  &trans
-                          &kp LGUI      &trans           &kp SPACE        &kp RET  &mo 3        &trans
+&kp LG(W)   &kp HOME      &kp UP    &kp END       &kp PG_UP  &trans          &trans  &td_7  &td_8  &td_9  &kp LC(LA(LG(P)))     &kp LG(Q)
+&mo 3       &kp LC(LEFT)  &kp DOWN  &kp RIGHT     &kp PG_DN  &trans          &trans  &td_4  &td_5  &td_6  &kp LC(LA(LG(BSLH)))  &kp LC(LA(LG(SPACE)))
+&kp LSHFT   &kp LC(LA(Q))  &kp LS(LG(FSLH))  &kp LS(LG(A))  &kp LS(LG(V))  &trans    &trans  &td_1  &td_2  &td_3  &kp LC(LS(TAB))  &kp LC(TAB)
+                           &trans    &trans        &trans      &kp DOT  &td_0  &trans
             >;
         };
 
         SYM {
             display-name = "Symbols";
-
-            // -----------------------------------------------------------------------------------------
-            // |  TAB |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  | BKSP |
-            // | CTRL |     |     |     |     |     |   |  -  |  =  |  [  |  ]  |  \  |  `   |
-            // | SHFT |     |     |     |     |     |   |  _  |  +  |  {  |  }  | "|" |  ~   |
-            //                    | GUI |     | SPC |   | ENT |     | ALT |
-
             bindings = <
-&trans  &kp EXCL  &kp AT          &kp HASH        &kp DLLR         &kp PRCNT    &kp CARET  &kp AMPS   &kp ASTRK  &kp LEFT_PARENTHESIS  &kp RPAR  &trans
-&trans  &trans    &trans          &kp UP_ARROW    &trans           &kp LSHIFT   &kp MINUS  &kp EQUAL  &kp LBKT   &kp RBKT              &kp BSLH  &trans
-&trans  &trans    &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp TILDE    &kp UNDER  &kp PLUS   &kp LBRC   &kp RBRC              &kp PIPE  &trans
-                                  &kp LGUI        &mo 3           &kp SPACE    &kp RET    &trans     &trans
+&kp GRAVE          &kp EXCL          &kp AT            &kp HASH          &kp DLLR          &kp PRCNT          &kp CARET  &kp AMPS   &kp ASTRK          &kp LPAR           &kp RPAR           &kp BSLH
+&kp LC(LS(LA(J)))  &kp LC(LS(LA(A)))  &kp LC(LS(LA(S)))  &kp LC(LS(LA(D)))  &kp LC(LS(LA(K)))  &kp LSHFT         &kp SQT    &kp MINUS  &kp LC(LS(LA(EQUAL)))  &kp LC(LS(LA(L)))  &kp LC(LS(LA(SEMI)))  &kp LC(LS(LA(RET)))
+&kp LC(N1)         &kp LC(N0)        &trans            &trans            &trans            &trans             &trans     &kp C_PREV  &kp C_VOL_DN       &kp C_VOL_UP       &kp C_NEXT         &kp C_PP
+                                      &trans            &mo 3             &trans            &kp LC(LS(LA(SPACE)))  &kp LBRC  &kp RBRC
             >;
         };
 
         ADJ {
             display-name = "Functions";
             bindings = <
-&trans  &kp F1        &kp F2        &kp F3        &kp F4      &kp F5            &kp F6  &kp F7  &kp F8  &kp F9  &kp F10      &trans
-&trans  &kp F11       &kp F12       &trans        &trans      &studio_unlock            &trans  &trans  &trans  &trans  &trans       &trans
-&trans  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_CLR  &bt BT_CLR_ALL    &trans  &trans  &trans  &trans  &bootloader  &trans
-                                    &trans        &trans      &trans            &trans  &trans  &trans
+&trans  &trans         &kp LG(UP)    &trans         &trans      &trans              &trans          &kp F7  &kp F8  &kp F9  &kp F10  &trans
+&trans  &kp LG(LEFT)  &kp LG(DOWN)  &kp LG(RIGHT)  &trans      &studio_unlock      &trans          &kp F4  &kp F5  &kp F6  &kp F11  &trans
+&trans  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2   &bt BT_CLR  &bt BT_CLR_ALL      &kp LC(LA(F1))  &kp F1  &kp F2  &kp F3  &kp F12  &trans
+                                     &trans         &trans      &trans              &trans          &kp LBKT  &kp RBKT
             >;
         };
+
         EXTRA {
-                display-name = "Extra";
+            display-name = "Extra";
             bindings = <
-&trans  &trans       &trans         &trans          &trans      &msc SCRL_UP    &trans  &trans  &trans  &trans  &trans      &trans
-&trans  &trans       &trans        &mmv MOVE_UP      &trans   &msc SCRL_DOWN            &trans  &mkp LCLK  &mkp RCLK  &trans  &trans       &trans
-&trans  &trans       &mmv MOVE_LEFT   &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-                                     &trans        &trans      &trans            &trans  &trans  &trans
+&trans  &trans  &trans          &mkp MCLK       &trans           &msc SCRL_UP      &trans          &kp LC(LA(N7))  &kp LC(LA(N8))  &kp LC(LA(N9))  &kp LALT   &kp LC(LS(LA(SPACE)))
+&trans  &trans  &mkp LCLK       &mmv MOVE_UP    &mkp RCLK        &msc SCRL_DOWN    &trans          &kp LC(LA(N4))  &kp LC(LA(N5))  &kp LC(LA(N6))  &trans     &trans
+&trans  &trans  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &trans            &kp LC(LA(N0))  &kp LC(LA(N1))  &kp LC(LA(N2))  &kp LC(LA(N3))  &trans     &trans
+                                &trans          &trans           &trans            &kp LSHFT       &trans          &trans
             >;
         };
     };
